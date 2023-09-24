@@ -1,0 +1,35 @@
+
+.wrapper {
+    text-align: center;
+
+}
+
+.PostId_Block {
+
+    background-color: wheat;
+    margin: 0 auto;
+    width: 650px;
+    height: 200px;
+    border: orangered 1px solid;
+    border-radius: 25px;
+}
+
+.main {
+    margin-top: 25px;
+    margin-left: 50px;
+    font-weight: 700;
+}
+
+.text {
+    width: 600px;
+
+
+}
+
+.button {
+    margin-top: 40px;
+    height: 20px;
+    width: 100px;
+    border: orangered 1px solid;
+    border-radius: 10px;
+}
