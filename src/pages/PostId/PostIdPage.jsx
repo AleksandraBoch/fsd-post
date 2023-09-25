@@ -13,7 +13,7 @@ const PostIdPage = () => {
 
 
     if (isLoading) {
-        return <div><Loader/></div>;
+        return <div className={s.loader}><Loader/></div>;
     }
 
     if (isError) {

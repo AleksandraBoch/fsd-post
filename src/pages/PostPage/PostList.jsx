@@ -1,6 +1,6 @@
 import s from "./postList.module.css"
 import PostItem from "../../entities/PostItem";
-import {useEffect, useRef, useState} from "react";
+import {useState} from "react";
 import Loader from "../../shared/utils/loader/loader";
 import {useGetAllQuery} from "../../shared/Api/ApiService";
 
