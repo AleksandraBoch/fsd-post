@@ -1,4 +1,4 @@
-import {postsApi} from "../../../../shared/Api/ApiService";
+import {postsApi} from "../../shared/Api/ApiService";
 
 export const getPostById = postsApi.injectEndpoints({
 

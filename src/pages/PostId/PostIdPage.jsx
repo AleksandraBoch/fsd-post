@@ -1,9 +1,9 @@
 import React from 'react';
 import s from './PostId.module.css'
 import {useNavigate, useParams} from "react-router-dom";
-import {postsApi, useGetPostByIdQuery} from "../../../shared/Api/ApiService";
-import Loader from "../../../shared/loader/loader";
-import {usePostQuery} from "./API/ApiPostById";
+import {postsApi, useGetPostByIdQuery} from "../../shared/Api/ApiService";
+import Loader from "../../shared/utils/loader/loader";
+import {usePostQuery} from "../API/ApiPostById";
 
 
 const PostIdPage = () => {

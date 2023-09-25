@@ -7,10 +7,11 @@ export const postsApi = createApi({
     }),
     endpoints: (build) => ({
             getAll: build.query({
-                query: (limit = 10) => ({
+                query: (limit = 10,page=1) => ({
                     url: `/posts`,
                     params: {
-                        _limit: limit
+                        _limit: limit,
+                        _page:page
                     }
                 })
             }),

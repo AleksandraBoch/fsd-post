@@ -1,7 +1,7 @@
 import React from 'react';
 import {Routes,Route} from "react-router-dom";
-import PostList from "../pages/PostPage/PostList";
-import PostIdPage from "../pages/PostPage/PostId/PostIdPage";
+import PostList from "../../pages/PostPage/PostList";
+import PostIdPage from "../../pages/PostId/PostIdPage";
 
 const AppWithRouter = () => {
     return (

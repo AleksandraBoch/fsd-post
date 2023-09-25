@@ -1,43 +1,32 @@
-
 import s from "./postList.module.css"
-import PostItem from "./PostCard/PostItem";
-import {ApiService} from "../../shared/Api/Api";
-import {useEffect, useState} from "react";
+import PostItem from "../../entities/PostItem";
+import {useEffect, useRef, useState} from "react";
+import Loader from "../../shared/utils/loader/loader";
+import {useGetAllQuery} from "../../shared/Api/ApiService";
 
 
 const PostList = () => {
-
-    const [posts,setPosts]=useState([])
-
-    useEffect(()=>{
-        ApiService.getAll().then(res=>setPosts(res.date))
-    },[])
-// async function fetchPosts(){
-//         const response=ApiService()
-//     setPosts(response.data)
-// }
-async function getDate(){
-        const newPosts=await ApiService.getAll()
-    setPosts(newPosts)
-}
-
+    const [limit, setLimit] = useState(100)
+    const {isLoading, data} = useGetAllQuery(limit)
 
     return (
-        <div >
-    <h1>Список постов</h1>
-            <div className={s.main}>
-                {/*{post.map(post,index=>*/}
-                {/*<PostItem key={post.id} post={post} />)}*/}
-                {posts && posts.map(posts=>
-                    <PostItem
-                    posts={posts}/>
-                )}
+        <div>
 
-                <button onClick={getDate}></button>
+            <div className={s.main}>
+                <h1>Список постов</h1>
+                {
+                    isLoading ?
+                        <><Loader/></>
+                        :
+                        <> {data && data.map(posts =>
+                            <PostItem key={posts.id} posts={posts}/>)}</>
+
+                }
             </div>
 
         </div>
     );
 };
+
 
 export default PostList;
